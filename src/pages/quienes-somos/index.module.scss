@@ -1,0 +1,90 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .inner {
+    max-width: 1200px;
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 20px;
+
+    .content {
+      margin-top: 30px;
+      font-family: "Poppins", serif;
+      line-height: 30px;
+    }
+
+    .title {
+      font-size: 60.8px;
+      font-family: "Pacifico", serif;
+      line-height: 75px;
+    }
+
+    .miembrosContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 20px;
+      margin-top: 30px;
+
+      .miembro {
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+        border-radius: 30px;
+        padding: 30px;
+        min-height: 700px;
+
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+
+        .name {
+          font-size: 28px;
+          font-family: "Poppins", serif;
+          //margin-top: 20px;
+        }
+
+        .cargo {
+          font-size: 14.933344px;
+          font-family: "Poppins", Arial, Helvetica, sans-serif;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          margin-top: 6px;
+
+          ion-icon {
+            font-size: 20px;
+          }
+        }
+
+        img {
+          width: 452px;
+          height: 432px;
+          object-fit: cover;
+          border-radius: 30px;
+          transform: rotate(-8deg) translateY(40px) translateX(20px);
+          transition: all 0.5s ease;
+        }
+
+        .resumen {
+          position: absolute;
+          bottom: 20px;
+          background-color: rgba(255, 255, 255, 0.8);
+          border-radius: 20px;
+          padding: 16px 10px;
+          left: 0;
+          display: flex;
+          margin: 0 20px;
+        }
+
+        &:hover {
+          img {
+            transform: rotate(0deg) translateY(40px) translateX(20px);
+          }
+        }
+      }
+    }
+  }
+}

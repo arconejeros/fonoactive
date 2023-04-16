@@ -4,15 +4,27 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:do": "LOCALTODO=true next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@ionic/core": "^7.0.0",
+    "classnames": "^2.3.2",
+    "constate": "^1.0.0",
+    "escape-html": "^1.0.3",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
+    "ionicons": "^7.1.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-parallax": "^3.5.1",
+    "sass": "^1.60.0",
+    "slate": "^0.93.0",
+    "swiper": "^9.2.0"
   }
 }

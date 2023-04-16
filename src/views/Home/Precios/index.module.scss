@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .innerContainer {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+
+    .bajada {
+      .bajadaTitle {
+        font-size: 50.128px;
+        font-family: "Pacifico", serif;
+        line-height: 61px;
+        margin-bottom: 20px;
+      }
+      .bajadaText {
+        font-size: 16px;
+        font-family: "Poppins", serif;
+      }
+      .cta {
+        width: 160px;
+        height: 52px;
+        border-radius: 50px;
+        background-color: rgb(255,212,202);
+        font-weight: 600;
+        font-family: "Poppins", serif;
+        font-size: 16px;
+        margin-top: 26px;
+      }
+    }
+    .pricesContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .price {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 431px;
+        width: 300px;
+        border-radius: 30px;
+        border: 1px solid black;
+
+
+        .title {
+          font-size: 39.4672px;
+          font-family: "Pacifico", serif;
+          margin-bottom: 16px;
+        }
+        .icon {
+          height: 60px;
+          width: 60px;
+          background: #e47f7c;
+          border-radius: 50%;
+        }
+
+        ul {
+          padding: 24px 0;
+          li {
+            font-size: 16px;
+            font-family: "Poppins", serif;
+          }
+        }
+
+        .amount {
+          font-size: 39.4672px;
+          font-family: "Pacifico", serif;
+        }
+        &:nth-child(1) {
+          position: relative;
+          left: 20px;
+        }
+        &:nth-child(2) {
+          zoom: 1.1;
+          background-color: rgb(255,212,202);
+          border-color: rgb(255,212,202);
+          z-index: 2;
+        }
+        &:nth-child(3) {
+          position: relative;
+          left: -20px;
+        }
+      }
+    }
+  }
+}

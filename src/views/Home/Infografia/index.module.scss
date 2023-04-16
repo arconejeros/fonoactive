@@ -1,0 +1,105 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff1ca;
+  padding: 100px 20px;
+  padding-bottom: 20px;
+  position: relative;
+  margin: 100px 0;
+
+  .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    &:nth-child(1) {
+      top: initial;
+      bottom: 0;
+    }
+  }
+
+  .inner {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-direction: column;
+
+    .subTitle {
+      font-size: 20px;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .title {
+      font-size: 60px;
+      font-family: "Pacifico", sans-serif;
+    }
+
+    .row {
+      display: flex;
+      margin-top: 34px;
+
+      .info, .imageContainer {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 64px;
+      }
+
+      .info {
+        display: flex;
+        justify-content: center;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        .item {
+          display: flex;
+
+          .iconColumn {
+            display: flex;
+            justify-content: center;
+
+            .icon {
+              width: 40px;
+              height: 40px;
+              background-color: #F2F5F9;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+
+          .textColumn {
+            display: flex;
+            flex-direction: column;
+            padding-left: 16px;
+
+            .itemTitle {
+              font-size: 24px;
+            }
+
+            .itemContent {
+              font-size: 16px;
+              font-family: 'Poppins', serif;
+              padding-top: 9.6px;
+            }
+          }
+
+        }
+      }
+      .imageContainer {
+        img {
+          width: 433px;
+          height: 452px;
+          object-fit: cover;
+          position: relative;
+          top: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+export const isProd = process.env.NODE_ENV === 'production';
+export const baseUrl = isProd ? 'https://fonoactivebackend.uplevelcap.cl' : process.env.LOCALTODO === 'true' ? "https://fonoactivebackend.uplevelcap.cl" : 'http://localhost:3009';
