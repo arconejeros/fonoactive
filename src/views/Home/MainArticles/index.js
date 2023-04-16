@@ -3,14 +3,10 @@ import styles from "./index.module.scss";
 import icon from "@/assets/icon.svg";
 import {withApp} from "@/contexts/appContext";
 import Link from "next/link";
+import {colors} from "@/utils/colors";
 
 const MainArticles = ({app: {articulos, config}}) => {
-	const colors = [
-		{bgColor: "#fcd4cb"},
-		{bgColor: "#fef1ca"},
-		{bgColor: "#b2d8f2"},
-		{bgColor: "#385568", color: "#FFFFFF"}
-	]
+
 	const cards = [
 		{
 			title: "Pregnancy Yoga",
@@ -51,7 +47,7 @@ const MainArticles = ({app: {articulos, config}}) => {
 					 key={i.toString()}
 				>
 					<Link href={`/blog/${card.slug}`}>
-						<div className={styles.icon}>
+						<div className={styles.icon} style={{backgroundColor: colors[i].bgColor, filter: "saturate(1.5)"}}>
 							<img src={icon.src} alt=""/>
 						</div>
 						<div className={styles.cardTitle}>
@@ -61,8 +57,6 @@ const MainArticles = ({app: {articulos, config}}) => {
 							{card.shortDescription}
 						</div>
 						<div className={styles.viewMore}>
-
-
 							LEER MAS
 							<ion-icon name="arrow-forward-outline"></ion-icon>
 						</div>

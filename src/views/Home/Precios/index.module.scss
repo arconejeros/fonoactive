@@ -18,21 +18,24 @@
         line-height: 61px;
         margin-bottom: 20px;
       }
+
       .bajadaText {
         font-size: 16px;
         font-family: "Poppins", serif;
       }
+
       .cta {
         width: 160px;
         height: 52px;
         border-radius: 50px;
-        background-color: rgb(255,212,202);
+        background-color: rgb(255, 212, 202);
         font-weight: 600;
         font-family: "Poppins", serif;
         font-size: 16px;
         margin-top: 26px;
       }
     }
+
     .pricesContainer {
       display: flex;
       justify-content: center;
@@ -54,6 +57,7 @@
           font-family: "Pacifico", serif;
           margin-bottom: 16px;
         }
+
         .icon {
           height: 60px;
           width: 60px;
@@ -63,6 +67,7 @@
 
         ul {
           padding: 24px 0;
+
           li {
             font-size: 16px;
             font-family: "Poppins", serif;
@@ -73,19 +78,74 @@
           font-size: 39.4672px;
           font-family: "Pacifico", serif;
         }
+
         &:nth-child(1) {
           position: relative;
           left: 20px;
         }
+
         &:nth-child(2) {
           zoom: 1.1;
-          background-color: rgb(255,212,202);
-          border-color: rgb(255,212,202);
+          background-color: rgb(255, 212, 202);
+          border-color: rgb(255, 212, 202);
           z-index: 2;
         }
+
         &:nth-child(3) {
           position: relative;
           left: -20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    .innerContainer {
+      flex-direction: column;
+
+      .bajada {
+        text-align: center;
+
+        .bajadaTitle {
+          font-size: 2.95rem !important;
+          text-align: center;
+          line-height: 1.2;
+
+        }
+
+        .bajadaText {
+          font-size: 14px;
+          text-align: left;
+        }
+        .cta {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+
+      .pricesContainer {
+        flex-direction: column;
+        margin-top:  20px;
+        width: 100%;
+        gap: 20px;
+
+        .price {
+          margin-bottom: 20px;
+          width: 100%;
+
+          &:nth-child(1) {
+            left: 0;
+          }
+
+          &:nth-child(2) {
+            zoom: 1;
+          }
+
+          &:nth-child(3) {
+            left: 0;
+          }
         }
       }
     }

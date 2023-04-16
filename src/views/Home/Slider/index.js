@@ -12,6 +12,7 @@ import {withApp} from "@/contexts/appContext";
 
 
 const Slider = ({app: {sliders, config}}) => {
+	console.log("sliders", sliders)
 	return (
 	  <div className={styles.mainCont}>
 		  {/*<img className={styles.topClouds}*/}
@@ -22,7 +23,7 @@ const Slider = ({app: {sliders, config}}) => {
 			loop={true}
 			speed={1500}
 			autoplay={{
-				delay: 3000,
+				delay: 300000,
 				disableOnInteraction: false,
 			}}
 			modules={[Pagination, Navigation, Autoplay]}

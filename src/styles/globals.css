@@ -85,3 +85,15 @@ a {
     color: #e47f7c;
     font-weight: bold;
 }
+
+@media (max-width: 768px) {
+    .swiper-button-prev {
+        left: 10px !important;
+    }
+    .swiper-button-next {
+        right: 10px !important;
+    }
+    .swiper-button-prev:after, .swiper-button-next:after {
+        font-size: 30px !important;
+    }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./index.module.scss";
+import {colors} from "@/utils/colors";
 
 const Infografia = () => {
 	return (
@@ -20,7 +21,7 @@ const Infografia = () => {
 				  <div className={styles.info}>
 					  <div className={styles.item}>
 						  <div className={styles.iconColumn}>
-							  <div className={styles.icon}/>
+							  <div className={styles.icon} style={{backgroundColor: colors[0].bgColor}}/>
 						  </div>
 						  <div className={styles.textColumn}>
 							  <div className={styles.itemTitle}>
@@ -35,7 +36,7 @@ const Infografia = () => {
 					  </div>
 					  <div className={styles.item}>
 						  <div className={styles.iconColumn}>
-							  <div className={styles.icon}/>
+							  <div className={styles.icon} style={{backgroundColor: colors[1].bgColor}}/>
 						  </div>
 						  <div className={styles.textColumn}>
 							  <div className={styles.itemTitle}>
@@ -57,7 +58,7 @@ const Infografia = () => {
 				  <div className={styles.info}>
 					  <div className={styles.item}>
 						  <div className={styles.iconColumn}>
-							  <div className={styles.icon}/>
+							  <div className={styles.icon} style={{backgroundColor: colors[2].bgColor}}/>
 						  </div>
 						  <div className={styles.textColumn}>
 							  <div className={styles.itemTitle}>
@@ -72,7 +73,7 @@ const Infografia = () => {
 					  </div>
 					  <div className={styles.item}>
 						  <div className={styles.iconColumn}>
-							  <div className={styles.icon}/>
+							  <div className={styles.icon} style={{backgroundColor: colors[3].bgColor}}/>
 						  </div>
 						  <div className={styles.textColumn}>
 							  <div className={styles.itemTitle}>

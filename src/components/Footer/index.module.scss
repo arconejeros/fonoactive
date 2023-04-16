@@ -60,6 +60,7 @@
           .contactTitle {
             transition: all 0.2s ease-in-out;
           }
+
           .contactValue {
             transition: all 0.2s ease-in-out;
             transform: translateY(10px);
@@ -69,11 +70,13 @@
           }
 
           &:hover {
-            box-shadow: 0 0 0 4em #fcd4ca inset,0 5px 0 0 rgb(24 24 24 / 15%) inset,0 3px 10px rgb(0 0 0 / 20%);
+            box-shadow: 0 0 0 4em #fcd4ca inset, 0 5px 0 0 rgb(24 24 24 / 15%) inset, 0 3px 10px rgb(0 0 0 / 20%);
+
             .contactTitle {
               transform: translateY(-10px);
               opacity: 0;
             }
+
             .contactValue {
               transition: all 0.2s ease-in-out;
               transform: translateY(0px);
@@ -159,6 +162,74 @@
             background-color: #fcd4ca;
             font-family: "Poppins", serif;
             font-weight: bolder;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .parallax {
+    height: 100vh;
+
+    .container {
+      background-color: #b2d8f1;
+      height: 100vh;
+      padding-top: 50px;
+
+      .wave {
+        width: initial;
+      }
+
+      .inner {
+        flex-direction: column-reverse;
+        gap: 30px;
+
+        .left, .right {
+          width: 100%;
+          padding: 0 20px;
+        }
+
+        .left {
+          background-color: #b2d8f1;
+          justify-content: flex-start;
+
+          .logoContainer {
+            font-size: 20px;
+            justify-content: center;
+          }
+
+          .socials {
+            justify-content: center;
+          }
+
+          .contactButton {
+            width: 100%;
+            padding: 0 20px;
+
+            .contactTitle {
+              font-size: 14px;
+            }
+
+            .contactValue {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .right {
+
+          form {
+            padding: 40px 20px;
+
+            .formRow {
+              border-radius: 30px;
+            }
+
+            .formTitle {
+              font-size: 30px;
+            }
           }
         }
       }

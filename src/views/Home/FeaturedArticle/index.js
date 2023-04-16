@@ -6,6 +6,7 @@ import Link from "next/link";
 import {kebabCase} from "lodash";
 
 const FeaturedArticle = ({position, articulo}) => {
+	console.log("articulo", articulo)
 	const image = position !== "left"
 	  ? "https://bambino.bold-themes-cdn.com/demo-02/wp-content/uploads/sites/3/2022/07/image_01_prices.jpg"
 	  : "https://bambino.bold-themes-cdn.com/demo-02/wp-content/uploads/sites/3/2022/07/image_02_prices_02.jpg"
@@ -23,7 +24,7 @@ const FeaturedArticle = ({position, articulo}) => {
 				  </div>
 				  <div className={styles.ctaContainer}>
 					  <Link href={`/blog/${kebabCase(articulo.slug)}`}>
-					  	<button>Leer mas...</button>
+						  <button>Leer mas...</button>
 					  </Link>
 				  </div>
 			  </div>
@@ -31,7 +32,11 @@ const FeaturedArticle = ({position, articulo}) => {
 		  </div>
 		  <div className={styles.coverContainer}>
 			  <img
-				src={image}
+				src={articulo?.cover?.url ?? "https://bambino.bold-themes-cdn.com/demo-02/wp-content/uploads/sites/3/2022/07/image_01_prices.jpg"}
+				onError={({currentTarget}) => {
+					currentTarget.onerror = null; // prevents looping
+					currentTarget.src = "https://bambino.bold-themes-cdn.com/demo-02/wp-content/uploads/sites/3/2022/07/image_01_prices.jpg";
+				}}
 				alt=""/>
 		  </div>
 	  </div>
