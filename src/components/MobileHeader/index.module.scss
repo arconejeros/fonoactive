@@ -65,7 +65,7 @@
       min-width: 100vw;
       z-index: 2;
       background-color: rgba(255,255,255,.3);
-      height: 40px;
+      height: 80px;
       justify-content: space-between;
       align-items: center;
       padding: 20px;
@@ -77,7 +77,12 @@
       color: var(--pink);
 
       .title {
-        margin-left: -10px;
+        margin-left: -20px;
+
+        img {
+          max-width: 130px;
+          margin-top: 10px;
+        }
       }
 
       .menuButton {
@@ -87,7 +92,7 @@
         justify-content: center;
         align-items: center;
         ion-icon {
-            font-size: 30px;
+            font-size: 40px;
             color: white;
         }
       }

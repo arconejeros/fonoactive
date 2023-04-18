@@ -165,9 +165,7 @@
         .dropdownContainer {
           display: flex;
           max-height: max-content;
-          top: 140px;
-          top: 167px;
-          top: 116px;
+          top: 174px;
           left: 0;
           width: 100vw;
           background: white;
@@ -261,6 +259,9 @@
       align-items: center;
       color: var(--pink);
       font-size: 30px;
+      img {
+        max-width: 180px;
+      }
     }
   }
 

@@ -15,6 +15,7 @@ function useAppContext() {
     const [sliders, setSliders] = useState([]);
     const [articulos, setArticulos] = useState([]);
     const [comoFunciona, setComoFunciona] = useState([]);
+    const [menus, setMenus] = useState([]);
     const [config, setConfig] = useState({});
     const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -36,7 +37,9 @@ function useAppContext() {
 		setConfig,
 		drawerOpen,
 		setDrawerOpen,
-		checkContext
+		checkContext,
+		menus,
+		setMenus
     };
 }
 

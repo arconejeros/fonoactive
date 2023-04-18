@@ -3,8 +3,13 @@ import styles from "./index.module.scss";
 import classNames from "classnames";
 import Link from "next/link";
 import {withApp} from "@/contexts/appContext";
+import logo from "@/assets/fonoactive-logo.png";
+import { groupBy } from "lodash";
 
-const Header = ({app: {config}}) => {
+const Header = ({app: {config, menus}}) => {
+	const grouped = groupBy(menus, "tipo");
+	console.log("grouped", grouped)
+
 	const [showSticky, setShowSticky] = useState(false);
 	useEffect(() => {
 		var lastScrollTop = 0;
@@ -40,24 +45,29 @@ const Header = ({app: {config}}) => {
 			  <div className={styles.row}>
 				  <ul className={styles.socials}>
 					  <a href={config?.socials?.instagram} target="_blank">
-						  <li>
+						  <li style={{backgroundColor: "#89d0c7"}}>
 							  <ion-icon name="logo-instagram"/>
 
 						  </li>
 					  </a>
 					  <a href={config?.socials?.facebook} target="_blank">
-						  <li>
+						  <li style={{backgroundColor: "#dc6859"}}>
 							  <ion-icon name="logo-facebook"/>
 						  </li>
 					  </a>
 					  <a href={config?.socials?.whatsapp} target="_blank">
-						  <li>
+						  <li style={{backgroundColor: "#f5a45d"}}>
+							  <ion-icon name="logo-whatsapp"/>
+						  </li>
+					  </a>
+					  <a href={config?.socials?.whatsapp} target="_blank">
+						  <li style={{backgroundColor: "#f7b5c4"}}>
 							  <ion-icon name="logo-whatsapp"/>
 						  </li>
 					  </a>
 				  </ul>
 				  <div className={styles.logoContainer}>
-					  FONO<b>ACTIVE</b>
+					  <img src={logo.src} alt="Fonoactive"/>
 				  </div>
 			  </div>
 			  <ul className={styles.sections}>
@@ -69,46 +79,46 @@ const Header = ({app: {config}}) => {
 					  <ul className={styles.dropdownContainer}>
 						  <li className={styles.dropDownElement} style={{backgroundColor: "#C3EA77"}}>
 							  <HeartRandom/>
-							  <h2>Terapias</h2>
+							  <h2>Programas</h2>
 							  <ul className={styles.hiddenInfo}>
-								  <li>Psicología</li>
-								  <li>Psicopedagogía</li>
-								  <li>Terapia Ocupaciona</li>
-								  <li>Fonoaudiología</li>
-								  <li>Test ADOS-2 Y WISCV</li>
+								  {grouped?.programas?.map((d,i) => (
+									<Link href={`/blog/${d.articulos.slug}`} key={i.toString()} >
+										<li key={i.toString()}>{d.title}</li>
+									</Link>
+								  ))}
 							  </ul>
 						  </li>
 						  <li className={styles.dropDownElement} style={{backgroundColor: "#c36"}}>
 							  <HeartRandom/>
-							  <h2>Recursos</h2>
+							  <h2>Servicios</h2>
 							  <ul className={styles.hiddenInfo}>
-								  <li>Psicología</li>
-								  <li>Psicopedagogía</li>
-								  <li>Terapia Ocupaciona</li>
-								  <li>Fonoaudiología</li>
-								  <li>Test ADOS-2 Y WISCV</li>
+								  {grouped?.servicios?.map((d,i) => (
+									<Link href={`/blog/${d.articulos.slug}`} key={i.toString()} >
+										<li key={i.toString()}>{d.title}</li>
+									</Link>
+								  ))}
 							  </ul>
 						  </li>
 						  <li className={styles.dropDownElement} style={{backgroundColor: "#9BD6FD"}}>
 							  <HeartRandom/>
-							  <h2>Talleres verano 2023</h2>
+							  <h2>Terapias</h2>
 							  <ul className={styles.hiddenInfo}>
-								  <li>Psicología</li>
-								  <li>Psicopedagogía</li>
-								  <li>Terapia Ocupaciona</li>
-								  <li>Fonoaudiología</li>
-								  <li>Test ADOS-2 Y WISCV</li>
+								  {grouped?.terapias?.map((d,i) => (
+									<Link href={`/blog/${d.articulos.slug}`} key={i.toString()} >
+										<li key={i.toString()}>{d.title}</li>
+									</Link>
+								  ))}
 							  </ul>
 						  </li>
 						  <li className={styles.dropDownElement} style={{backgroundColor: "#ffdca8"}}>
 							  <HeartRandom/>
-							  <h2>Consejería para padres</h2>
+							  <h2>Recursos</h2>
 							  <ul className={styles.hiddenInfo}>
-								  <li>Psicología</li>
-								  <li>Psicopedagogía</li>
-								  <li>Terapia Ocupaciona</li>
-								  <li>Fonoaudiología</li>
-								  <li>Test ADOS-2 Y WISCV</li>
+								  {grouped?.recursos?.map((d,i) => (
+									<Link href={`/blog/${d.articulos.slug}`} key={i.toString()} >
+										<li key={i.toString()}>{d.title}</li>
+									</Link>
+								  ))}
 							  </ul>
 						  </li>
 					  </ul>

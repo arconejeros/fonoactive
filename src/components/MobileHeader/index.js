@@ -4,6 +4,8 @@ import {withApp} from "@/contexts/appContext";
 import classNames from "classnames";
 import Link from "next/link";
 
+import logo from "@/assets/fonoactive-logo.png";
+
 const MobileHeader = ({app: {drawerOpen, setDrawerOpen, config}, children}) => {
 	console.log("drawerOpen",drawerOpen)
 	function randomIntFromInterval(min, max) { // min and max included
@@ -100,7 +102,9 @@ const MobileHeader = ({app: {drawerOpen, setDrawerOpen, config}, children}) => {
 				  <button className={styles.menuButton} onClick={() => setDrawerOpen(!drawerOpen)}>
 					  <ion-icon name="menu-outline"></ion-icon>
 				  </button>
-				  <div className={styles.title}>FONO<b>ACTIVE</b></div>
+				  <a href="/" className={styles.title}>
+					  <img src={logo.src} alt="Fonoactive" />
+				  </a>
 				  <div/>
 			  </div>
 		  </div>

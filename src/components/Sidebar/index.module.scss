@@ -122,3 +122,16 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+
+  .sideBar {
+    padding: 16px;
+  }
+  .searchBar {
+    justify-content: flex-start;
+    input {
+      width: 80%;
+    }
+  }
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from "./index.module.scss";
 import {Parallax} from "react-parallax";
 import {withApp} from "@/contexts/appContext";
+import logo from "@/assets/fonoactive-logo-white.png";
 
 const Footer = ({app: {config}}) => {
 	return (
@@ -21,7 +22,7 @@ const Footer = ({app: {config}}) => {
 			  <div className={styles.inner}>
 				  <div className={styles.left}>
 					  <div className={styles.logoContainer}>
-						  FONO<b>ACTIVE</b>
+						  <img src={logo.src} alt="Fonoactive"/>
 					  </div>
 					  <ul className={styles.socials}>
 						  <a href={config?.socials?.instagram} target="_blank">

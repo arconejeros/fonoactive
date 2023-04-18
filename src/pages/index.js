@@ -6,12 +6,13 @@ import {useEffect} from "react";
 import {withApp} from "@/contexts/appContext";
 import {baseUrl, isProd} from "@/utils/utils";
 
-function Home({app, sliders, articulos, setComoFunciona, comoFunciona, config}) {
+function Home({app, sliders, articulos, menus, comoFunciona, config}) {
 	useEffect(() => {
 		app.setSliders(sliders)
 		app.setArticulos(articulos)
 		app.setComoFunciona(comoFunciona)
 		app.setConfig(config?.config)
+		app.setMenus(menus)
 	}, [])
 
 	return (
@@ -29,6 +30,8 @@ function Home({app, sliders, articulos, setComoFunciona, comoFunciona, config}) 
 	)
 }
 export async function getStaticProps(context) {
+	const menusRes = await fetch(`${baseUrl}/api/menus`);
+	const menus = await menusRes.json();
 	const configRes = await fetch(`${baseUrl}/api/configuracion`);
 	const config = await configRes.json();
 	const res = await fetch(`${baseUrl}/api/sliders`);
@@ -43,6 +46,7 @@ export async function getStaticProps(context) {
 			articulos: articulos.docs || [],
 			comoFunciona: comoFunciona.docs || [],
 			config: config.docs[0] || {},
+			menus: menus.docs || [],
 		}, // will be passed to the page component as props
 	}
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./index.module.scss";
+import {colors} from "@/utils/colors";
 
 const Precios = () => {
 	return (
@@ -21,7 +22,7 @@ const Precios = () => {
 					  <div className={styles.title}>
 						  Drop-in
 					  </div>
-					  <div className={styles.icon}></div>
+					  <div className={styles.icon} style={{backgroundColor: colors[2].bgColor}}></div>
 					  <ul>
 						  <li>Bring Yoga mat</li>
 						  <li>Bring Blanket</li>
@@ -36,7 +37,7 @@ const Precios = () => {
 					  <div className={styles.title}>
 						  Drop-in
 					  </div>
-					  <div className={styles.icon}></div>
+					  <div className={styles.icon} ></div>
 					  <ul>
 						  <li>Bring Yoga mat</li>
 						  <li>Bring Blanket</li>
@@ -51,7 +52,7 @@ const Precios = () => {
 					  <div className={styles.title}>
 						  Drop-in
 					  </div>
-					  <div className={styles.icon}></div>
+					  <div className={styles.icon} style={{backgroundColor: colors[2].bgColor}}></div>
 					  <ul>
 						  <li>Bring Yoga mat</li>
 						  <li>Bring Blanket</li>

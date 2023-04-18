@@ -63,3 +63,17 @@
   //  background: rgba(0,0,0,0);
   //}
 }
+
+@media (max-width: 768px) {
+  .container {
+    .inner {
+      .subTitle {
+        text-align: center;
+      }
+      .title {
+        text-align: center;
+        font-size: 50.8px;
+      }
+    }
+  }
+}
