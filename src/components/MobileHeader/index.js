@@ -102,9 +102,9 @@ const MobileHeader = ({app: {drawerOpen, setDrawerOpen, config}, children}) => {
 				  <button className={styles.menuButton} onClick={() => setDrawerOpen(!drawerOpen)}>
 					  <ion-icon name="menu-outline"></ion-icon>
 				  </button>
-				  <a href="/" className={styles.title}>
+				  <Link href="/" className={styles.title}>
 					  <img src={logo.src} alt="Fonoactive" />
-				  </a>
+				  </Link>
 				  <div/>
 			  </div>
 		  </div>
